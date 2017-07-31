@@ -1,1 +1,1 @@
-web: gunicorn arcadesnake:app
+web: gunicorn app:app

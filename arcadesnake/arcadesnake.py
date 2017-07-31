@@ -4,11 +4,15 @@ import sqlite3
 from flask import Flask, request, session, g, redirect, url_for, \
                   abort, render_template, flash
 
-DATABASE=os.path.join(app.root_path, 'arcadesnake.db'),
-SECRET_KEY='my_precious'
-
 app = Flask(__name__) # create the application instance :)
 app.config.from_object(__name__) # load config from this file , arcadesnake.py
+
+# Load default config and override config from an environment variable
+app.config.update(dict(
+    DATABASE=os.path.join(app.root_path, 'arcadesnake.db'),
+    SECRET_KEY='my_precious'
+))
+app.config.from_envvar('ARCADESNAKE_SETTINGS', silent=True)
 
 def connect_db():
     """Connects to the specific database."""

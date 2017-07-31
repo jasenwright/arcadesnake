@@ -1,0 +1,1 @@
+from .arcadesnake import app

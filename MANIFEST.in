@@ -1,0 +1,3 @@
+graft arcadesnake/templates
+graft arcadesnake/static
+include arcadesnake/schema.sql
