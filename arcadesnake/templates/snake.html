@@ -8,8 +8,8 @@
 {% if error %}<div class="error"><strong>Error:</strong> {{ error }}</div>{% endif %}
 <form action="" method=post>
   <dl>
-    <dt>Name (Limit Three Characters):
-    <dd><input type=text size=30 maxlength="3" name=username>
+    <dt>Name:
+    <dd><input type=text size=30 maxlength="28" name=username>
     <dt>Score:
     <dd><input id="highScoreInput" type=text size=30 name=score readonly>
     <dd><input type=submit class="btn btn-default" value='Post High Score'>

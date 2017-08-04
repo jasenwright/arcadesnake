@@ -48,7 +48,7 @@ function update() {
 
 	//wait and then continue with the next move.
 	clearTimeout(runTimeout);
-	runTimeout = setTimeout(update, 100);//need to wait a bit, otherwise CPU get overloaded and browser becomes unresponsive.
+	runTimeout = setTimeout(update, 500);//need to wait a bit, otherwise CPU get overloaded and browser becomes unresponsive.
 }
 
 //Point class, used to refer to a specific square on the grid

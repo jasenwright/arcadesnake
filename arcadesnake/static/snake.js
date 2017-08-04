@@ -36,7 +36,8 @@ function keydown(e) {
 	var keyCode = e.which ? e.which : e.keyCode;
     // *** Queue the arrow key presses
     if (keyCode >= 37 && keyCode <= 40 && keyCode !== keyBuffer[keyBuffer.length-1]) {
-        keyBuffer.push(keyCode);
+				e.preventDefault();
+				keyBuffer.push(keyCode);
     }
 }
 
